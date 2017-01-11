@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a"
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="1484116136977726000"
+    token="-2974760833567875299"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="0" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="0" />
+    <task
+        name="verifier"
+        duration="0" />
+
+    <build
+        timestamp="1484115984450208000"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="1484116136977726000"
+        verifier="COLD_SWAP_REQUESTED" />
+
+</instant-run>

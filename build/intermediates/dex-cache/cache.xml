@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_11f3f7cf4e9e46cc06b9bfac1b6150db35c40fcc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.0_6c611d7c6fb7dc0f872ac89893372eeccd5c585b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.0_aeba81cef42d87aa7add82a050da94974c8897cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.0_a4b54d0f40281507d97465991f68349254eecedb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_91e34f4f711860e60b125e4f6c2f839c1b729f77/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.0_e8e6946012e648ae29450daf875261678861c581/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.0_b25a98cc65244746c04900869ef0987330756409/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_53ab0c3022bb115ff2fa89de8f0f0a7a29b056a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_46c2ed421ae6980c0f68d3054e9efaa0965fba90/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_461606a7e99ec8c80b2d8e27e150329dd464ac57/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_12370e5a8e32d85d4ecff9f27efec3b19a968aeb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="96e33a7aaee00ab64270e2a9887b8f9ef32c8b73">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.0_b7ee464859637ac16f56939eba8fb52c3bdf9c22/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.0_e7ef54093844167918547c06d454b53c49d67196/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.0_69b3431396109db28734800ce2319ff7ea63b432/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.0_379f9db8c2b4d4bc328d7ab066f7f75df737e14e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.0_d129c3243f86755556d545320a2cf1f27f4db1a4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="820acba36fa86ab15cb3d472b654dedb495075fd">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-gridlayout-v7-24.2.0_823ff5be83c47d3cc56783f12272ff1c5d899e89/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9d203a6f07650a465069acafa2ea0e2bd44080d2">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_42868370a83108814c7e5cfd7b5eeb616d5fb240/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="344f67e7a926c11ce977573c05eb38a4b19ca99f">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cca794e1ef50933e9f3cab4c237e750bcf9e4631/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_92fc425403a6fe264b7337d841e126b0dfaf515f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.0_604c86e11dbedd8d0cda06823d5f97566e676f22/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_05bfa7e531ba789da6957a1ed7f8fa918bdcb32e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_20e7270364ad27bed1edd88106a2f5dd525034b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/huanglingchieh/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.1/86b122e640af09b0723e1fa44083c354ba6d9089/glide-3.6.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.6.1_48056ae0e6b32627af20ad88cab562c9875a7c76/classes.dex" />
+    </item>
+
+</items>
