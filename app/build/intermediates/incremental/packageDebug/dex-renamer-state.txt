@@ -1,7 +1,7 @@
-#Wed Jan 11 14:26:59 CST 2017
-base.0=/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cca794e1ef50933e9f3cab4c237e750bcf9e4631
+#Wed Jan 11 15:13:08 CST 2017
+base.0=/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2b6de0d3ee408f6d84f7a100979a116cba8547d9
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_42868370a83108814c7e5cfd7b5eeb616d5fb240/classes.dex
-base.1=/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_42868370a83108814c7e5cfd7b5eeb616d5fb240
-file.0=/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cca794e1ef50933e9f3cab4c237e750bcf9e4631/classes.dex
+file.1=/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8ac71fbcdc4ef8a0a74e5df01ff8b48baf270512/classes.dex
+base.1=/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8ac71fbcdc4ef8a0a74e5df01ff8b48baf270512
+file.0=/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2b6de0d3ee408f6d84f7a100979a116cba8547d9/classes.dex

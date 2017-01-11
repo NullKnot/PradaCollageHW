@@ -4,6 +4,18 @@
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/anim-v21/design_bottom_sheet_slide_out.xml"
     },
     {
+        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/anim-v21/design_appbar_state_list_animator.xml",
+        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/anim-v21/design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
         "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/anim-v21/design_appbar_state_list_animator.xml",
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/anim-v21/design_appbar_state_list_animator.xml"
     },

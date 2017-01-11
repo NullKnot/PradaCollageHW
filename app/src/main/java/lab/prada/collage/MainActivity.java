@@ -1,27 +1,40 @@
 package lab.prada.collage;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.Callable;
 
 import bolts.Continuation;
@@ -62,6 +75,8 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 		allViews = (ViewGroup) findViewById(R.id.frame);
 		textPanel = (ViewGroup) findViewById(R.id.frame_texts);
 		photoPanel = (ViewGroup) findViewById(R.id.frame_images);
+
+		askPermissions();	//runtime時的權限請求
 	}
 
 	private void showProgressDialog(boolean enable) {
@@ -159,15 +174,15 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 				super.onActivityResult(requestCode, resultCode, intent);
 		}
 	}
-	
+
 	private String getRealPathFromURI(Uri contentURI) {
 	    Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
 	    if (cursor == null) { // Source is Dropbox or other similar local file path
 	        return contentURI.getPath();
-	    } else { 
-	        cursor.moveToFirst(); 
-	        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA); 
-	        return cursor.getString(idx); 
+	    } else {
+	        cursor.moveToFirst();
+	        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+	        return cursor.getString(idx);
 	    }
 	}
 
@@ -273,6 +288,43 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 	}
 
 	@Override
+	public void onBringPhotoToTop(final PhotoView view) {
+		final long periodTime = 200;
+
+		doMainViewAnimation(view, periodTime, 1.0f, 1.15f, 1.0f, 1.15f);
+		view.postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				view.bringToFront();
+			}
+		}, periodTime*2);
+	}
+
+	@Override
+	public void onPushPhotoToBottom(final PhotoView view) {
+		final float mainView_centerX = view.getX() + view.getWidth()/2;
+		final float mainView_centerY = view.getY() + view.getHeight()/2;
+		final long periodTime = 300;
+		int totalViewNum = photoPanel.getChildCount();
+
+		if(totalViewNum > 1) {
+			view.bringToFront();
+
+			for (int counter = 0; counter < totalViewNum-1; counter++) {
+				if (isViewOverLapping(view, photoPanel.getChildAt(0))) {
+					System.out.println("overlap!");
+					doOtherViewsAnimation(photoPanel.getChildAt(0), periodTime, mainView_centerX, mainView_centerY);
+				}else{
+					System.out.println("Nothing happen!");
+				}
+				photoPanel.getChildAt(0).bringToFront();
+			}
+
+			doMainViewAnimation(view, periodTime, 1.0f, 0.8f, 1.0f, 0.8f);
+		}
+	}
+
+	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 			case R.id.btnAddPic:
@@ -280,6 +332,117 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 				break;
 			case R.id.btnAddText:
 				startActivityForResult(new Intent(this, TextEditorActivity.class), ADD_NEW_TEXT);
+				break;
+		}
+	}
+
+	private boolean isViewOverLapping(View mainView, View otherView){
+
+		int distanceX = (mainView.getWidth() + otherView.getWidth())/2;
+		int distanceY = (mainView.getHeight() + otherView.getHeight())/2;
+		float mainView_centerX = mainView.getX() + mainView.getWidth()/2;
+		float mainView_centerY = mainView.getY() + mainView.getHeight()/2;
+		float otherView_centerX = otherView.getX() + otherView.getWidth()/2;
+		float otherView_centerY = otherView.getY() + otherView.getHeight()/2;
+
+		if( Math.abs(mainView_centerX - otherView_centerX) <= distanceX
+				&& Math.abs(mainView_centerY - otherView_centerY) <= distanceY){
+			return true;
+		}else{
+			return false;
+		}
+		/*
+		int[] mainViewPosition = new int[2];
+		int[] otherVIewPosition = new int[2];
+
+		mainView.getLocationOnScreen(mainViewPosition);
+		otherView.getLocationOnScreen(otherVIewPosition);
+
+		// Rect constructor parameters: left, top, right, bottom
+		Rect rectMainView = new Rect(mainViewPosition[0], mainViewPosition[1],
+				mainViewPosition[0] + mainView.getMeasuredWidth(), mainViewPosition[1] + mainView.getMeasuredHeight());
+		Rect rectOtherView = new Rect(otherVIewPosition[0], otherVIewPosition[1],
+				otherVIewPosition[0] + otherView.getMeasuredWidth(), otherVIewPosition[1] + otherView.getMeasuredHeight());
+		return rectMainView.intersect(rectOtherView)||rectOtherView.intersect(rectMainView);
+		*/
+	}
+
+	private void doMainViewAnimation(View mainView, long periodTime,
+									 float startSizeX, float endSizeX, float startSizeY, float endSizeY){
+		AnimationSet animationSet = new AnimationSet(true);
+		ScaleAnimation scaleAnimation = new ScaleAnimation(startSizeX, endSizeX, startSizeY, endSizeY,
+				Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f);
+		scaleAnimation.setDuration(periodTime);
+		scaleAnimation.setRepeatCount(1);
+		scaleAnimation.setRepeatMode(Animation.REVERSE);
+		animationSet.addAnimation(scaleAnimation);
+		mainView.startAnimation(animationSet);
+	}
+
+	private void doOtherViewsAnimation(View otherView, long periodTime, float mainView_centerX, float mainView_centerY){
+		float otherView_centerX = otherView.getX()+ otherView.getWidth()/2;
+		float otherView_centerY = otherView.getY() + otherView.getHeight()/2;
+		float distanceX = 250, distanceY = 250;
+
+		if(mainView_centerX - otherView_centerX > 0){	//周圍的view在被長按的view的左邊，往左移
+			distanceX = -distanceX;
+		}
+
+		if(mainView_centerY - otherView_centerY > 0){	//周圍的view在被長按的view的上面，往上移
+			distanceY = -distanceY;
+		}
+
+		AnimationSet animationSet = new AnimationSet(true);
+		TranslateAnimation translateAnimation = new TranslateAnimation(0, distanceX, 0, distanceY);
+		translateAnimation.setDuration(periodTime);
+		translateAnimation.setRepeatCount(1);
+		translateAnimation.setRepeatMode(Animation.REVERSE);
+		animationSet.addAnimation(translateAnimation);
+		otherView.startAnimation(animationSet);
+	}
+
+	private static final int REQ_PERMISSIONS = 0;
+
+	private void askPermissions() {
+		//Toast.makeText(this, "askPermission Start!", Toast.LENGTH_SHORT).show();
+		String[] permissions = {
+				android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+				android.Manifest.permission.READ_EXTERNAL_STORAGE
+		};
+
+		Set<String> permissionsRequest = new HashSet<>();
+		for (String permission : permissions) {
+			int result = ContextCompat.checkSelfPermission(this, permission);
+			if (result != PackageManager.PERMISSION_GRANTED) {
+				//System.out.println("permission need to be granted: "+ result);
+				permissionsRequest.add(permission);
+			}
+		}
+
+		if (!permissionsRequest.isEmpty()) {
+			ActivityCompat.requestPermissions(this,
+					permissionsRequest.toArray(new String[permissionsRequest.size()]),
+					REQ_PERMISSIONS);
+		}
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode,
+										   @NonNull String[] permissions,
+										   @NonNull int[] grantResults) {
+		switch (requestCode) {
+			case REQ_PERMISSIONS:
+				String text = "";
+				for (int i = 0; i < grantResults.length; i++) {
+					if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
+						text += permissions[i] + "\n";
+					}
+				}
+				if (!text.isEmpty()) {
+					text += "Not Granted\nSome function will failure!";
+					Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+					finish();
+				}
 				break;
 		}
 	}

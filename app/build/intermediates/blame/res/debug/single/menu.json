@@ -4,11 +4,23 @@
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/menu/main.xml"
     },
     {
+        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/menu/main.xml"
+    },
+    {
         "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/menu/text.xml",
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/menu/text.xml"
     },
     {
+        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/menu/text.xml",
+        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/menu/text.xml"
+    },
+    {
         "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/menu/multiple_image_picker.xml",
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/menu/multiple_image_picker.xml"
+    },
+    {
+        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/menu/multiple_image_picker.xml",
+        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/menu/multiple_image_picker.xml"
     }
 ]

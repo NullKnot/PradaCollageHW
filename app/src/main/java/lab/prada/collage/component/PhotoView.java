@@ -15,6 +15,8 @@ public class PhotoView extends ImageView implements BaseComponent {
 
 	public interface OnPhotoListener {
 		void onModifyPhoto(PhotoView view);
+		void onBringPhotoToTop(PhotoView view);
+		void onPushPhotoToBottom(PhotoView view);
 	}
 
 	@Override
@@ -57,6 +59,21 @@ public class PhotoView extends ImageView implements BaseComponent {
 		@Override
 		public boolean onDown(MotionEvent e) {
 			return true;
+		}
+
+		//處理圖片單擊事件，確定使用者是單擊而非雙擊的第一下時，才會觸發的事件（注意：onSingleTapUp則是只要是第一下點擊都會觸發）
+		@Override
+		public boolean onSingleTapConfirmed(MotionEvent e){
+			if(listener != null)
+				listener.onBringPhotoToTop(PhotoView.this);
+			return true;
+		}
+
+		//處理圖片長按事件
+		@Override
+		public void onLongPress(MotionEvent e){
+			if(listener != null)
+				listener.onPushPhotoToBottom(PhotoView.this);
 		}
 
 		@Override
