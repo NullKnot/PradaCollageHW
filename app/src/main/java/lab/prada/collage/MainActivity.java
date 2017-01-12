@@ -1,6 +1,5 @@
 package lab.prada.collage;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -20,6 +19,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -75,8 +75,6 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 		allViews = (ViewGroup) findViewById(R.id.frame);
 		textPanel = (ViewGroup) findViewById(R.id.frame_texts);
 		photoPanel = (ViewGroup) findViewById(R.id.frame_images);
-
-		askPermissions();	//runtime時的權限請求
 	}
 
 	private void showProgressDialog(boolean enable) {
@@ -289,29 +287,46 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 
 	@Override
 	public void onBringPhotoToTop(final PhotoView view) {
+		/*-----debug時再參考的數據，之後刪除-----
+		int[] img_coordinates = new int[2];
+		view.getLocationOnScreen(img_coordinates);
+		DisplayMetrics metrics = getResources().getDisplayMetrics();
+		System.out.println("density:" + metrics.density);
+		System.out.println("getScale:" + view.getScaleX());
+		System.out.println("getX:" + img_coordinates[0]);
+		System.out.println("getPivotX:"+view.getPivotX());
+		System.out.println("getWidth:"+view.getWidth());
+		System.out.println("getMeasureWidth:"+view.getMeasuredWidth());
+		System.out.println("getY:" + img_coordinates[1]);
+		System.out.println("getPivotY:"+view.getPivotY());
+		System.out.println("getHeight:"+view.getHeight());
+		System.out.println("getMeasureHeight:"+view.getMeasuredHeight());
+		*/
 		final long periodTime = 200;
-
-		doMainViewAnimation(view, periodTime, 1.0f, 1.15f, 1.0f, 1.15f);
-		view.postDelayed(new Runnable() {
+		doMainViewAnimation(view, periodTime, 1.0f, 1.15f, 1.0f, 1.15f);	//先跑動畫
+		view.postDelayed(new Runnable() {	//延遲一段時間，等到跑完動畫再將圖片移到最上面
 			@Override
 			public void run() {
 				view.bringToFront();
 			}
 		}, periodTime*2);
+
 	}
 
 	@Override
 	public void onPushPhotoToBottom(final PhotoView view) {
-		final float mainView_centerX = view.getX() + view.getWidth()/2;
-		final float mainView_centerY = view.getY() + view.getHeight()/2;
+		int[] viewPosition = new int[2];
+		view.getLocationOnScreen(viewPosition);
+		final float mainView_centerX = viewPosition[0] + (view.getWidth() * view.getScaleX()) / 2;	//點擊中的圖片的中心點X座標
+		final float mainView_centerY = viewPosition[1] + (view.getHeight() * view.getScaleY()) / 2;	//點擊中的圖片的中心點Y座標
 		final long periodTime = 300;
-		int totalViewNum = photoPanel.getChildCount();
+		int totalViewNum = photoPanel.getChildCount();	//取得目前圖片張數
 
 		if(totalViewNum > 1) {
-			view.bringToFront();
-
+			view.bringToFront();	//先將欲移到最底部的圖片置頂
+			//再慢慢將每張圖片都置頂，達成選中的圖片移到底部的效果
 			for (int counter = 0; counter < totalViewNum-1; counter++) {
-				if (isViewOverLapping(view, photoPanel.getChildAt(0))) {
+				if (isViewOverLapping(view, photoPanel.getChildAt(0))) {	//判斷是否周圍有其他圖片疊在選中的圖上
 					System.out.println("overlap!");
 					doOtherViewsAnimation(photoPanel.getChildAt(0), periodTime, mainView_centerX, mainView_centerY);
 				}else{
@@ -320,15 +335,20 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 				photoPanel.getChildAt(0).bringToFront();
 			}
 
-			doMainViewAnimation(view, periodTime, 1.0f, 0.8f, 1.0f, 0.8f);
+			doMainViewAnimation(view, periodTime, 1.0f, 0.8f, 1.0f, 0.8f);	//執行被選中的圖片的動畫
 		}
 	}
+
+	private boolean havePermission = false;
 
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 			case R.id.btnAddPic:
-				startActivityForResult(new Intent(this, MultipleImagePickerActivity.class), SELECT_PHOTO);
+				checkPermissions();	//檢查是否擁有相關權限
+				if(havePermission) {
+					startActivityForResult(new Intent(this, MultipleImagePickerActivity.class), SELECT_PHOTO);
+				}
 				break;
 			case R.id.btnAddText:
 				startActivityForResult(new Intent(this, TextEditorActivity.class), ADD_NEW_TEXT);
@@ -337,7 +357,48 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 	}
 
 	private boolean isViewOverLapping(View mainView, View otherView){
+		//目前這個方法在旋轉時會誤判（多判），應該是因為旋轉過後的Rect會變成是能包住旋轉玩的View，變得比期望中的還大，照成誤判
+		Rect mainViewRect = new Rect();
+		mainView.getHitRect(mainViewRect);
 
+		Rect otherViewRect = new Rect();
+		otherView.getHitRect(otherViewRect);
+
+		System.out.println(mainViewRect);
+		return (Rect.intersects(mainViewRect, otherViewRect));
+
+		/*
+		int[] mainViewPosition = new int[2];
+		int[] otherViewPosition = new int[2];
+		mainView.getLocationOnScreen(mainViewPosition);
+		otherView.getLocationOnScreen(otherViewPosition);
+
+		float mainViewWidth = mainView.getWidth() * mainView.getScaleX();
+		float mainViewHeight = mainView.getHeight() * mainView.getScaleY();
+		float otherViewWidth = otherView.getWidth() * otherView.getScaleX();
+		float otherViewHeight = otherView.getHeight() * otherView.getScaleY();
+		float mainViewX = mainViewPosition[0];
+		float mainViewY = mainViewPosition[1];
+		float otherViewX = otherViewPosition[0];
+		float otherViewY = otherViewPosition[1];
+
+		if( (mainViewX > otherViewX) && (mainViewX - otherViewX < otherViewWidth) ){	//otherView在X軸上是疊在mainView的左邊
+			if( (mainViewY > otherViewY) && (mainViewY - otherViewY < otherViewHeight) ){	//otherView與mainView左上方重疊
+				return true;
+			}else if ( (otherViewY > mainViewY) && (otherViewY - mainViewY < mainViewHeight) ){	//otherView與mainView左下方重疊
+				return true;
+			}
+		}else if ( (otherViewX > mainViewX) && (otherViewX - mainViewX < mainViewWidth) ){	//otherView在X軸上是疊在mainView的右邊
+			if( (mainViewY > otherViewY) && (mainViewY - otherViewY < otherViewHeight) ){	//otherView與mainView右上方重疊
+				return true;
+			}else if ( (otherViewY > mainViewY) && (otherViewY - mainViewY < mainViewHeight) ){	//otherView與mainView右下方重疊
+				return true;
+			}
+		}
+
+		return false;
+		*/
+		/*
 		int distanceX = (mainView.getWidth() + otherView.getWidth())/2;
 		int distanceY = (mainView.getHeight() + otherView.getHeight())/2;
 		float mainView_centerX = mainView.getX() + mainView.getWidth()/2;
@@ -351,22 +412,29 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 		}else{
 			return false;
 		}
-		/*
+
+		*/
+/*
 		int[] mainViewPosition = new int[2];
 		int[] otherVIewPosition = new int[2];
+		float mainViewWidth = mainView.getMeasuredWidth() * mainView.getScaleX();
+		float mainViewHeight = mainView.getMeasuredHeight() * mainView.getScaleY();
+		float otherViewWidth = otherView.getMeasuredWidth() * otherView.getScaleX();
+		float otherViewHeight = otherView.getMeasuredHeight() * otherView.getScaleY();
 
 		mainView.getLocationOnScreen(mainViewPosition);
 		otherView.getLocationOnScreen(otherVIewPosition);
 
 		// Rect constructor parameters: left, top, right, bottom
 		Rect rectMainView = new Rect(mainViewPosition[0], mainViewPosition[1],
-				mainViewPosition[0] + mainView.getMeasuredWidth(), mainViewPosition[1] + mainView.getMeasuredHeight());
+				mainViewPosition[0] + (int)mainViewWidth, mainViewPosition[1] + (int)mainViewHeight);
 		Rect rectOtherView = new Rect(otherVIewPosition[0], otherVIewPosition[1],
-				otherVIewPosition[0] + otherView.getMeasuredWidth(), otherVIewPosition[1] + otherView.getMeasuredHeight());
+				otherVIewPosition[0] + (int)otherViewWidth, otherVIewPosition[1] + (int)otherViewHeight);
 		return rectMainView.intersect(rectOtherView)||rectOtherView.intersect(rectMainView);
-		*/
+*/
 	}
 
+	//執行點擊物件的動畫
 	private void doMainViewAnimation(View mainView, long periodTime,
 									 float startSizeX, float endSizeX, float startSizeY, float endSizeY){
 		AnimationSet animationSet = new AnimationSet(true);
@@ -374,14 +442,17 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 				Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f);
 		scaleAnimation.setDuration(periodTime);
 		scaleAnimation.setRepeatCount(1);
-		scaleAnimation.setRepeatMode(Animation.REVERSE);
+		scaleAnimation.setRepeatMode(Animation.REVERSE);	//搭配setRepeatCount(1)達成來回效果
 		animationSet.addAnimation(scaleAnimation);
 		mainView.startAnimation(animationSet);
 	}
 
+	//執行周遭物件的動畫
 	private void doOtherViewsAnimation(View otherView, long periodTime, float mainView_centerX, float mainView_centerY){
-		float otherView_centerX = otherView.getX()+ otherView.getWidth()/2;
-		float otherView_centerY = otherView.getY() + otherView.getHeight()/2;
+		int[] otherViewPosition = new int[2];
+		otherView.getLocationOnScreen(otherViewPosition);
+		float otherView_centerX = otherViewPosition[0]+ (otherView.getWidth() * otherView.getScaleX()) / 2;	//圖片的中心點X座標
+		float otherView_centerY = otherViewPosition[1] + (otherView.getHeight() * otherView.getScaleY()) / 2;	//圖片的中心點X座標
 		float distanceX = 250, distanceY = 250;
 
 		if(mainView_centerX - otherView_centerX > 0){	//周圍的view在被長按的view的左邊，往左移
@@ -396,14 +467,14 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 		TranslateAnimation translateAnimation = new TranslateAnimation(0, distanceX, 0, distanceY);
 		translateAnimation.setDuration(periodTime);
 		translateAnimation.setRepeatCount(1);
-		translateAnimation.setRepeatMode(Animation.REVERSE);
+		translateAnimation.setRepeatMode(Animation.REVERSE);	//搭配setRepeatCount(1)達成來回效果
 		animationSet.addAnimation(translateAnimation);
 		otherView.startAnimation(animationSet);
 	}
 
 	private static final int REQ_PERMISSIONS = 0;
 
-	private void askPermissions() {
+	private void checkPermissions() {
 		//Toast.makeText(this, "askPermission Start!", Toast.LENGTH_SHORT).show();
 		String[] permissions = {
 				android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -419,10 +490,12 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 			}
 		}
 
-		if (!permissionsRequest.isEmpty()) {
+		if (!permissionsRequest.isEmpty()) {	//還沒取得權限，發請權限請求
 			ActivityCompat.requestPermissions(this,
 					permissionsRequest.toArray(new String[permissionsRequest.size()]),
 					REQ_PERMISSIONS);
+		}else{	//已取得過權限
+			havePermission = true;
 		}
 	}
 
@@ -438,10 +511,12 @@ public class MainActivity extends BaseActivity implements OnLabelListener, OnPho
 						text += permissions[i] + "\n";
 					}
 				}
-				if (!text.isEmpty()) {
-					text += "Not Granted\nSome function will failure!";
-					Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
-					finish();
+				if (!text.isEmpty()) {	//使用者拒絕給予權限，無法執行後續動作
+					text += "No Granted,\nSome function will failure!";
+					Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+				}else{	//使用者給予權限，打開相片選擇器
+					havePermission = true;
+					startActivityForResult(new Intent(this, MultipleImagePickerActivity.class), SELECT_PHOTO);
 				}
 				break;
 		}

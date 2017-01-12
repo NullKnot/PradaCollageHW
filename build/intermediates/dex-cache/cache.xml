@@ -160,7 +160,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="b56c99fbd3dedfa4986faa2dbeb381450a475a2e">
+        sha1="b45322175735b0ba7d72620c3a1288d96b8428fa">
         <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2b6de0d3ee408f6d84f7a100979a116cba8547d9/classes.dex" />
     </item>
     <item
@@ -385,7 +385,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="fc347982473620b520af28e05d947e4c570fffee">
+        sha1="c9196424984188d3ae66675d10871809e9c500bc">
         <dex dex="/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8ac71fbcdc4ef8a0a74e5df01ff8b48baf270512/classes.dex" />
     </item>
     <item
