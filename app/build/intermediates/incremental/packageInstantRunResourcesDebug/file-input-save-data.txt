@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 11 22:24:16 CST 2017
+#Wed Jan 11 23:47:21 CST 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/resources-debug.ap_/res/anim/abc_fade_out.xml

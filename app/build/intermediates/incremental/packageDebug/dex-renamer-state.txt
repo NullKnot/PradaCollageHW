@@ -1,4 +1,4 @@
-#Wed Jan 11 15:13:08 CST 2017
+#Wed Jan 11 23:47:39 CST 2017
 base.0=/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2b6de0d3ee408f6d84f7a100979a116cba8547d9
 renamed.1=classes2.dex
 renamed.0=classes.dex

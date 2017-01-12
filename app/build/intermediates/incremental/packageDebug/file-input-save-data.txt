@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 11 15:13:08 CST 2017
+#Wed Jan 11 23:47:39 CST 2017
 210.set=ANDROID_RESOURCE
 14.set=DEX
 180.file=/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_textfield_search_material.xml

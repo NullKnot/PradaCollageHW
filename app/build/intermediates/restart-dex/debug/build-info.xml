@@ -5,53 +5,33 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="1484146318857611000"
-    token="-2974760833567875299"
-    verifier="COLD_SWAP_REQUESTED" >
+    timestamp="1484149640053870000"
+    token="4385183341534644078"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="249" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="150" />
     <task
         name="verifier"
-        duration="0" />
+        duration="24" />
+
+    <artifact
+        location="/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="1484118787697572000"
-        verifier="MANIFEST_FILE_CHANGE" >
+        timestamp="1484149640053870000"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="1484121018098239000"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="1484144655662650000"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
-    </build>
-    <build
-        timestamp="1484145942231628000"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="1484146318857611000"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

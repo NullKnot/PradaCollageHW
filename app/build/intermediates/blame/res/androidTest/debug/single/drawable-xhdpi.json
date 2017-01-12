@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi/ic_launcher.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/androidTest/res/drawable-xhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi/ic_launcher.png",
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/androidTest/res/drawable-xhdpi/ic_launcher.png"
     }

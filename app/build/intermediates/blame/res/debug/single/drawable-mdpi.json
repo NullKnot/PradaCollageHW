@@ -1,25 +1,5 @@
 [
     {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/drawable-mdpi/selected.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/drawable-mdpi/selected.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_dark_focused.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_focused.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_icon_dark_pressed.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_pressed.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_light_focused.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_focused.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_text_light_disabled.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_disabled.9.png"
-    },
-    {
         "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/glasses03.png",
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/drawable-mdpi/glasses03.png"
     },
@@ -28,155 +8,19 @@
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/drawable-mdpi/ic_empty.png"
     },
     {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_light_disabled.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_disabled.9.png"
-    },
-    {
         "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/selected.png",
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/drawable-mdpi/selected.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_dark_normal.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_normal.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_icon_dark_disabled.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_disabled.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_text_dark_focused.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_focused.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_text_light_pressed.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_pressed.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_light_normal.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_normal.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_dark_disabled.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_disabled.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_light_focused.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_focused.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_dark_focused.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_focused.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_text_dark_disabled.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_disabled.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_text_dark_normal.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_normal.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_light_pressed.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_light_pressed.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_dark_pressed.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_pressed.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_text_light_normal.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_normal.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_error.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/drawable-mdpi/ic_error.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_icon_dark_normal.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_normal.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_text_dark_pressed.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_pressed.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/drawable-mdpi/glasses01.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/drawable-mdpi/glasses01.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_normal.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_text_light_focused.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_light_focused.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_dark_disabled.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_icon_light_normal.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_normal.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_icon_dark_focused.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_dark_focused.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_icon_light_disabled.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_disabled.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_icon_light_focused.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_focused.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_light_disabled.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_disabled.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_light_pressed.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_light_pressed.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/drawable-mdpi/glasses03.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/drawable-mdpi/glasses03.png"
     },
     {
         "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/glasses01.png",
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/drawable-mdpi/glasses01.png"
     },
     {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_icon_light_pressed.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_icon_light_pressed.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_error.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/drawable-mdpi/ic_error.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_plus_signin_btn_icon_dark_pressed.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
-    },
-    {
         "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/glasses02.png",
         "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/drawable-mdpi/glasses02.png"
     },
     {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/drawable-mdpi/glasses02.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/drawable-mdpi/glasses02.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_empty.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollage/app/src/main/res/drawable-mdpi/ic_empty.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_google_signin_btn_text_dark_normal.9.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_normal.9.png"
-    },
-    {
-        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/common_full_open_on_phone.png",
-        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_full_open_on_phone.png"
+        "merged": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_error.png",
+        "source": "/Users/huanglingchieh/picCollageHW/PradaCollageHW/app/src/main/res/drawable-mdpi/ic_error.png"
     }
 ]
